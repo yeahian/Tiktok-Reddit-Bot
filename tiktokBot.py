@@ -12,7 +12,7 @@ import os
     THIS IS THE INFORMATION TO BE CHANGED FOR EACH SPECIFIC VIDEO
 
     TODO - change the redditStringInput to the reddit post text
-         - change the mp4 to whichever background video you would like
+         - change the mp4_path to whichever background video you would like
 
     (Other Changes)
         - Use tiktokCropper.py to make the video the correct aspect ratio
@@ -33,16 +33,13 @@ def delete_file_if_exists(file_path):
 #deleting old audio files
 delete_file_if_exists("/Users/*****/Documents/vs python/Tiktok Bot/testingSpedUp.mp3")
 
-redditStringInput = "Part 2, Not the A hole. Naming a child is a two yes and one no situation. Means you need two times yes for a name to be it and one no to make sure that name is not the name you choose. Works both ways if you’d ask me. Also, I am not a fan of naming the first name of a child after a parent. Because then the child will always be compared to their parents and need to fight harder to be their own person. I have less problems with the middle name being connected to someone else (parents, grandparents) because that is only a formal name and not used in everyday business.  Why is he dead set on Stuarta? I mean, there are so many beautiful names but he only wants to name his daughter after him? Why not after the mother? Like your name junior. It is a bit misogynistic to only want to name the baby after the father. Whose last name will the baby get? His as well? Maybe you could find a way, like name the baby with the same first letter as your husband (Stella, Sally, Sanne, etc). Make sure the baby has a middle name (if she shares the same last name as her father). Because it will be annoying for simple things like mail and stuff."
+redditStringInput = "This is some example text for you to switch out to some sort of reddit post or story. The text stored in this string will be converted to an MP3 file that will be played over the video."
 
 
 
-
-#mp3 should never change, mp4 is the background video which will if you choose
+#mp3 should never change, mp4 is the background video which is of your choosing
 mp3_path = "/Users/*****/Documents/vs python/Tiktok Bot/testing.mp3"
 mp4_path = "/Users/*****/Documents/vs python/Tiktok Bot/ytDownloads/(Your video here).mp4"
-
-
 clip_output_path = "/Users/*****/Documents/vs python/Tiktok Bot/clipGeneration/random_clip.mp4"
 
 
@@ -70,7 +67,7 @@ def spedUP(audioInput, audioOutput, speedRate=1.1):
 
 
 
-# Specify the input and output paths for the respective files *DO NOT CHANGE
+# Specify the input and output paths for the respective files *MP3_input_path should be the same as mp3_path
 mp3_input_path = "/Users/*****/Documents/vs python/Tiktok Bot/testing.mp3"
 mp3_output_path = "/Users/*****/Documents/vs python/Tiktok Bot/testingSpedUp.mp3"
 
@@ -98,9 +95,6 @@ def getVideoDuration(audio_path):
 duration = getVideoDuration(mp3_output_path)
 print(f" -----The audio is {duration} seconds.")
 
-
-
-
 original_clip = VideoFileClip(mp4_path)
 frame_rate = original_clip.fps
 total_frames = int(original_clip.duration * frame_rate)
@@ -120,8 +114,6 @@ random_clip.close()
 print(f" ----Random clip has been generated and saved to: {clip_output_path}")
 
 
-
-
 '''
                         PUTTING THE TWO FILES TOGETHER WITH THE MP3 OVER THE MP4
 
@@ -137,7 +129,6 @@ outputPath = "/Users/*****/Documents/vs python/Tiktok Bot/tiktokOutputs/combined
 vidWithAudio.write_videofile(outputPath, codec="libx264", audio_codec="aac")
 
 print(" -----Video with audio has been created:", outputPath)
-
 
 
 
