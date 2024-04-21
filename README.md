@@ -14,3 +14,6 @@ This goal of this project was to create simple videos for TikTok by pulling post
 6. Now we just take the video, put it through capcut to add the captions, and then auto export to be posted to tiktok
 
 Disclaimer: The program does not yet support captions from the initial video generation, they are created through using an application called Capcut. There will soon be an implementation once an efficient solution is found.
+
+
+The TikTok page that has current posts has the username, "reddit_thrillers". The link below takes you to the page.
