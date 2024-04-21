@@ -17,3 +17,4 @@ Disclaimer: The program does not yet support captions from the initial video gen
 
 
 The TikTok page that has current posts has the username, "reddit_thrillers". The link below takes you to the page.
+https://www.tiktok.com/@reddit_thrillers
