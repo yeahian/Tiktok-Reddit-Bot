@@ -31,16 +31,16 @@ def delete_file_if_exists(file_path):
         print(f"Deleted {file_path}")
 
 #deleting old audio files
-delete_file_if_exists("/Users/*****/Documents/vs python/Tiktok Bot/testingSpedUp.mp3")
+delete_file_if_exists("/Users/*****/DocumentsTiktok Bot/testingSpedUp.mp3")
 
 redditStringInput = "This is some example text for you to switch out to some sort of reddit post or story. The text stored in this string will be converted to an MP3 file that will be played over the video."
 
 
 
 #mp3 should never change, mp4 is the background video which is of your choosing
-mp3_path = "/Users/*****/Documents/vs python/Tiktok Bot/testing.mp3"
-mp4_path = "/Users/*****/Documents/vs python/Tiktok Bot/ytDownloads/(Your video here).mp4"
-clip_output_path = "/Users/*****/Documents/vs python/Tiktok Bot/clipGeneration/random_clip.mp4"
+mp3_path = "/Users/*****/Documents/Tiktok Bot/testing.mp3"
+mp4_path = "/Users/*****/Documents/Tiktok Bot/ytDownloads/(Your video here).mp4"
+clip_output_path = "/Users/*****/Documents/Tiktok Bot/clipGeneration/random_clip.mp4"
 
 
 
@@ -68,8 +68,8 @@ def spedUP(audioInput, audioOutput, speedRate=1.1):
 
 
 # Specify the input and output paths for the respective files *MP3_input_path should be the same as mp3_path
-mp3_input_path = "/Users/*****/Documents/vs python/Tiktok Bot/testing.mp3"
-mp3_output_path = "/Users/*****/Documents/vs python/Tiktok Bot/testingSpedUp.mp3"
+mp3_input_path = "/Users/*****/Documents/Tiktok Bot/testing.mp3"
+mp3_output_path = "/Users/*****/Documents/Tiktok Bot/testingSpedUp.mp3"
 
 #calling the function to make the changes
 spedUP(mp3_input_path, mp3_output_path)
@@ -125,7 +125,7 @@ audioClip = AudioFileClip(mp3_output_path)
 
 vidWithAudio = CompositeVideoClip([vidClip.set_audio(audioClip)])
 
-outputPath = "/Users/*****/Documents/vs python/Tiktok Bot/tiktokOutputs/combined_audio_and_video.mp4"
+outputPath = "/Users/*****/Documents/Tiktok Bot/tiktokOutputs/combined_audio_and_video.mp4"
 vidWithAudio.write_videofile(outputPath, codec="libx264", audio_codec="aac")
 
 print(" -----Video with audio has been created:", outputPath)
